@@ -1,22 +1,25 @@
-<% provide(:title, t("users.new.title")) %>
-<h1><%= t ".title" %></h1>
-<div class="row">
+<% provide :title, t("users.new.title") %>
+<h1><%= t "users.new.title" %></h1>
+
+<div class ="row">
   <div class="col-md-6 col-md-offset-3">
-   <%= form_with model: @user, url: signup_path do |f| %>
+    <%= form_with model: @user, url: signup_path do |f| %>
       <%= render "shared/error_messages" %>
-      <%= f.label :name, t("users.new.name") %>
-      <%= f.text_field :name %>
 
-      <%= f.label :email, t("users.new.email") %>
-      <%= f.email_field :email %>
+      <%= f.label :name, t(".name")%>
+      <%= f.text_field :name, class: "form-control" %>
 
-      <%= f.label :password, t("users.new.pass") %>
-      <%= f.password_field :password %>
+      <%= f.label :email, t(".email")%>
+      <%= f.email_field :email, class: "form-control" %>
 
-      <%= f.label :password_confirmation, t("users.new.passcf")%>
-      <%= f.password_field :password_confirmation %>
+      <%= f.label :password, t(".password") %>
+      <%= f.password_field :password, class: "form-control" %>
 
-      <%= f.submit t("users.new.creat"), class: "btn btn-primary" %>
-    <% end %>
+      <%= f.label :password_confirmation,t(".confirmation") %>
+      <%= f.password_field :password_confirmation, class: "form-control" %>
+
+      <%= f.submit t(".submit"), class: "btn btn-primary" %>
+      <% end %>
+
   </div>
 </div>

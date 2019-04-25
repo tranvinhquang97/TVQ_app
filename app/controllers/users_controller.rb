@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  def show
+    @user = User.find_by id: params[:id]
+  end
+
   def new
     @user = User.new
   end
@@ -7,16 +11,12 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
-      flash[:success] = t("users_controller.content")
+      flash.now[:success] = t ".new.sucess"
       redirect_to @user
     else
-      flash.now[:danger] = t(".show.error")
+      flash.now[:danger] = t ".new.unsucess"
       render :new
     end
-  end
-
-  def show
-    @user = User.find_by id: params[:id]
   end
 
   private
