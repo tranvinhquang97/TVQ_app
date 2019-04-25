@@ -1,25 +1,22 @@
 vi:
   header:
+    title: "Ứng Dụng"
     home: "Trang chủ"
     help: "Trợ giúp"
     login: "Đăng nhập"
   footer:
     content_html: 'The <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-                      by <a href="http://www.michaelhartl.com/">Michael Hartl</a>'
+                           by <a href="http://www.michaelhartl.com/">Michael Hartl</a>'
     about: "Về chúng tôi"
     contact: "Liên hệ"
     new: "Tin tức"
   static_pages:
     home:
       title: "Trang chủ"
-      welcome: "Chào mừng bạn đến với Sample App"
-      content_html: '<h2>
-           Đây là trang chủ của
-           <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-           sample application.
-           </h2>'
-      signup: "Sign up now!"
-      logo: "Rails Logo"
+      content_html: '</p>Đây là trang chủ của
+        <a href="https://www.railstutorial.org/">Hướng dẫn về Ruby on Rails</a>.
+        </p>'
+      pages1: "Chào mừng bạn đến với Sample App"
     help:
       title: "Trợ giúp"
       content_html: '</p>Nhận trợ giúp về Hướng dẫn Ruby on Rails tại
@@ -38,11 +35,25 @@ vi:
         <a href="http://rubyonrails.org/">Ruby on Rails</a>.
         Đây là ứng dụng mẫu cho hướng dẫn.
       </p>'
-    users:
-      new:
-        title: "Đăng Ký"
-        content: "Đây là trang đăng ký cho người sử dụng mới"
+    contact:
+      title: "Liên hệ"
+      content_html: '<p>
+          Liên hệ tại <a href="https://www.railstutorial.org/contact">Địa chỉ liên hệ</a>.
+          </p>'
   layouts:
     application:
-      page_title: " Sản phẩm mẫu của Ruby On Rails"
-      name: "App Mẫu"
+      page_title: " Sản phẩm mẫu của Ruby on Rails"
+  users:
+     new:
+       title: "Đăng kí"
+       content_html: '<p>Đây sẽ là một trang đăng ký cho người dùng mới.</p>'
+       creat: "Tạo tài khoản"
+       name: "Tên"
+       email: "E-mail"
+       pass: "Mật Khẩu"
+       passcf: "Xác Nhận"
+  users_controller:
+     content: "Chào mừng bạn đến với Ứng Dụng!"
+  views:
+    shared:
+      content: "Biểu mẫu có chứa"
