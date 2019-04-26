@@ -1,22 +1,12 @@
 vi:
-  header:
-    title: "Ứng Dụng"
-    home: "Trang chủ"
-    help: "Trợ giúp"
-    login: "Đăng nhập"
-  footer:
-    content_html: 'The <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-                           by <a href="http://www.michaelhartl.com/">Michael Hartl</a>'
-    about: "Về chúng tôi"
-    contact: "Liên hệ"
-    new: "Tin tức"
   static_pages:
     home:
+      contain: "The form contains"
       title: "Trang chủ"
       content_html: '</p>Đây là trang chủ của
         <a href="https://www.railstutorial.org/">Hướng dẫn về Ruby on Rails</a>.
         </p>'
-      pages1: "Chào mừng bạn đến với Sample App"
+      signup: "Đăng Kí Ngay"
     help:
       title: "Trợ giúp"
       content_html: '</p>Nhận trợ giúp về Hướng dẫn Ruby on Rails tại
@@ -43,17 +33,47 @@ vi:
   layouts:
     application:
       page_title: " Sản phẩm mẫu của Ruby on Rails"
+    _header:
+      home: "Trang chủ"
+      login_h: "Đăng nhập"
+      help: "Giúp đỡ"
+      users: "Tài khoản"
+      logout: "Đăng xuất"
+      profile: "Thông tin cá nhân"
+      setting: "Cài đặt"
+    _footer:
+      about: "Về chúng tôi"
+      contact: "Liên hệ"
+      news: "Tin tức"
+      content_html: '<small>
+          <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
+                      viết bởi <a href="http://www.michaelhartl.com/">Michael Hartl</a>
+        </small>'
   users:
-     new:
-       title: "Đăng kí"
-       content_html: '<p>Đây sẽ là một trang đăng ký cho người dùng mới.</p>'
-       creat: "Tạo tài khoản"
-       name: "Tên"
-       email: "E-mail"
-       pass: "Mật Khẩu"
-       passcf: "Xác Nhận"
-  users_controller:
-     content: "Chào mừng bạn đến với Ứng Dụng!"
-  views:
-    shared:
-      content: "Biểu mẫu có chứa"
+    new:
+      title: "Tài khoản"
+      content_html:
+        '<p>Trang đăng kí tài khoản</p>'
+      name: "Tài khoản"
+      email: "Email của bản"
+      password: "Mật khẩu"
+      confirmation: "Nhập lại mật khẩu"
+      submit_button: "Đăng kí"
+
+      submit: "Tạo tài khoản"
+      sucess: "Chào mừng đến với Sample App"
+  activerecord:
+    atttributes:
+      user:
+        name: "Tài khoản"
+        email: "Email của bnạ"
+        password: "Mật khẩu"
+        confirmation: "Nhập lại mật khẩu"
+        submit_button: "Ấn để đăng kí"
+  session:
+    new:
+      login: "Đăng nhập"
+      new: "Chưa có tài khoản?"
+  controller:
+    sessions:
+wrongmail_password: "Không tồn tài khoản hoặc mặt khẩu không đúng"

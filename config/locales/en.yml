@@ -1,53 +1,13 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  header:
-    title: "Sample App"
-    home: "Home"
-    help: "Help"
-    login: "Log in"
-  footer:
-    content_html: 'The <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-      by <a href="http://www.michaelhartl.com/">Michael Hartl</a>'
-    about: "About"
-    contact: "Contact"
-    new: "News"
+  hello: "Hello world"
   static_pages:
     home:
+      contain: "The form contains"
       title: "Home"
       content_html: '<p>This is the home page for the
-     <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-     sample application.</p>'
-      pages1: "Welcome to the Sample App"
+      <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
+      sample application.</p>'
+      signup: "Sign Up Now"
     help:
       title: "Help"
       content_html: '<p>
@@ -57,7 +17,7 @@ en:
      To get help on this sample app, see the
      <a href="https://www.railstutorial.org/book"><em>Ruby on Rails
      Tutorial</em> book</a>.
-   </p>'
+     </p>'
     about:
       title: "About"
       content_html: '<p>
@@ -68,7 +28,7 @@ en:
      to teach web development with
      <a href="http://rubyonrails.org/">Ruby on Rails</a>.
      This is the sample application for the tutorial.
-   </p>'
+     </p>'
     contact:
       title: "Contact"
       content_html: '<p>
@@ -78,17 +38,27 @@ en:
   layouts:
     application:
       page_title: " Ruby on Rails Sample App"
+    _header:
+      home: "Home"
+      login_h: "Login"
+      help: "Help"
+      users: "Users"
+      logout: "Logout"
+      profile: "Profile"
+      setting: "Setting"
+    _footer:
+      about: "About"
+      contact: "Contact"
+      news: "News"
+      content_html:
+        '<small>
+              <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
+                          by <a href="http://www.michaelhartl.com/">Michael Hartl</a>
+          </small>'
   users:
     new:
-      title: "Sign up"
-      content_html: '<p>This will be a signup page for new users.</p>'
-      creat: "Create my account"
-      name: "Name"
-      email: "Email"
-      pass: "Password"
-      passcf: "Confirmation"
-  users_controller:
-      content: "Welcome to the Sample App!"
-  views:
-     shared:
-       content: "The form contains"
+      title: "User"
+      content_html: '<h1>Sign up</h1>
+          <p>This will be a sign up page for new users.</p>'
+      submit_button: "Log in"
+  sample_app: "Ruby on Rails Tutorial Sample App"
