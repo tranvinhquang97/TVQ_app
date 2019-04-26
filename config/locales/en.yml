@@ -37,7 +37,7 @@ en:
         </p>'
   layouts:
     application:
-      page_title: " Ruby on Rails Sample App"
+      page_title: "Sample products of Lotte"
     _header:
       home: "Home"
       login_h: "Login"
@@ -61,4 +61,5 @@ en:
       content_html: '<h1>Sign up</h1>
           <p>This will be a sign up page for new users.</p>'
       submit_button: "Log in"
+      submit: "Create account"
   sample_app: "Ruby on Rails Tutorial Sample App"
