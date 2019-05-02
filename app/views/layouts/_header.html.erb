@@ -5,6 +5,9 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to t("layouts._header.home"), root_path %></li>
         <li><%= link_to t("layouts._header.help"), help_path %></li>
+        <li><%= link_to t("static_pages.login.title"), login_path %></li>
+        <li><%= link_to t("static_pages.lang.en"), locale:"en" %></li>
+        <li><%= link_to t("static_pages.lang.vi"), locale:"vi" %></li>
            <% if logged_in? %>
           <li><%= link_to t("layouts._header.users"), "#" %></li>
           <li class="dropdown">
