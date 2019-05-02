@@ -8,18 +8,14 @@ class User < ApplicationRecord
   validates :password, presence: true
   has_secure_password
 
-  def downcase_email
-    email.downcase!
-  end
-
-  class << self
+   class << self
     def digest string
       cost = if ActiveModel::SecurePassword.min_cost
-               BCrypt::Engine::MIN_COST
+               eBCrypt::Engine::MIN_COST
              else
                BCrypt::Engine.cost
              end
-      BCrypt::Password.create(string, cost: cost)
+      BCrypt::Password.create string, cost: cost
     end
 
     def new_token
@@ -27,7 +23,7 @@ class User < ApplicationRecord
     end
   end
 
-   def remember
+  def remember
     @remember_token = User.new_token
     update remember_digest: User.digest(remember_token)
   end
@@ -39,6 +35,10 @@ class User < ApplicationRecord
 
   def forget
     update :remember_digest, nil
+  end
+
+  def current_user? orther_user
+    self == orther_user
   end
 
   private

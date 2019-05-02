@@ -1,13 +1,30 @@
 vi:
-  hello: "Hello world"
+  header:
+    home: "Trang chủ"
+    help: "Trợ giúp"
+    login: "Đăng nhập"
+    user: "Người dùng"
+    profile: "Hồ sơ"
+    setting: "Cài đặt"
+    logout: "Đăng xuất"
+    account: "Account"
+  footer:
+    content_html: 'The <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
+                      by <a href="http://www.michaelhartl.com/">Michael Hartl</a>'
+    about: "Về chúng tôi"
+    contact: "Liên hệ"
+    new: "Tin tức"
   static_pages:
     home:
-      contain: "The form contains"
       title: "Trang chủ"
-      content_html: '</p>Đây là trang chủ của
-        <a href="https://www.railstutorial.org/">Hướng dẫn về Ruby on Rails</a>.
-        </p>'
-      signup: "Đăng Kí Ngay"
+      welcome: "Chào mừng bạn đến với Sample App"
+      content_html: '<h2>
+           Đây là trang chủ của
+           <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
+           sample application.
+           </h2>'
+      signup: "Sign up now!"
+      logo: "Rails Logo"
     help:
       title: "Trợ giúp"
       content_html: '</p>Nhận trợ giúp về Hướng dẫn Ruby on Rails tại
@@ -26,60 +43,40 @@ vi:
         <a href="http://rubyonrails.org/">Ruby on Rails</a>.
         Đây là ứng dụng mẫu cho hướng dẫn.
       </p>'
-    contact:
-      title: "Liên hệ"
-      content_html: '<p>
-          Liên hệ tại <a href="https://www.railstutorial.org/contact">Địa chỉ liên hệ</a>.
-          </p>'
-  layouts:
-    application:
-      page_title: "Sản phẩm mẫu của Lotte"
-    _header:
-      home: "Trang chủ"
-      login_h: "Đăng nhập"
-      help: "Giúp đỡ"
-      users: "Tài khoản"
-      logout: "Đăng xuất"
-      profile: "Thông tin cá nhân"
-      setting: "Cài đặt"
-    _footer:
-      about: "Về chúng tôi"
-      contact: "Liên hệ"
-      news: "Tin tức"
-      content_html: '<small>
-          <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-                      viết bởi <a href="http://www.michaelhartl.com/">Michael Hartl</a>
-        </small>'
+
   users:
     new:
-      title: "Tài khoản"
-      content_html:
-        '<p>Trang đăng kí tài khoản</p>'
-      name: "Tài khoản"
-      email: "Email của bản"
-      password: "Mật khẩu"
-      confirmation: "Nhập lại mật khẩu"
-      submit_button: "Đăng kí"
-       
-      submit: "Tạo tài khoản"
-      sucess: "Chào mừng đến với Sample App"
-  activerecord:
-    atttributes:
-      user:
-        name: "Tài khoản"
-        email: "Email của bnạ"
-        password: "Mật khẩu"
-        confirmation: "Nhập lại mật khẩu"
-        submit_button: "Ấn để đăng kí"
-  session:
-    new:
-      login: "Đăng nhập"
-      new: "Chưa có tài khoản?"
-  login:
-      title: "Đăng nhập"
-      error_message: "Invalid email/password combination"
-      login_remember: "Nhớ đăng nhập"
-  controller:
-    sessions:
-
-wrongmail_password: "Không tồn tài khoản hoặc mặt khẩu không đúng"
+      title: "Đăng Ký"
+      content: "Đây là trang đăng ký cho người sử dụng mới"
+      create: "Tạo tài khoản"
+      success_ac: "Chào mừng bạn đến với Sample App!"
+      fail_ac: "Tạo tài khoản không thành công"
+    show:
+      error: "Không tìm thấy người dùng"
+    edit:
+      title: "Thay đổi thông tin người dùng"
+      button_text: "Lưu lại thay đổi"
+      name_page: "Cập nhật hồ sơ của bạn"
+      change: "Thay đổi"
+    update:
+      success: "Đã cập nhật hồ sơ"
+    logged_in_user:
+      unsuccess: "Please login"
+    index:
+      title: "Tất cả người dùng"
+      sure: "Bạn có chắc chắn không?"
+    destroy:
+      success: "Người dùng đã được xóa"
+      unsuccess: "Xóa người dùng không thành công"
+      delete: "Xóa"
+  layouts:
+    application:
+      page_title: " Sản phẩm mẫu của Ruby On Rails"
+      name: "App Mẫu"
+  sessions:
+    login: "Đăng nhập"
+    new_user: "Người sử dụng mới?"
+    signup: "Đăng nhập ngay!"
+    error: "Email/password không so khớp"
+    success: "Đăng nhập thành công"
+    remember_me_html: "<span>Lưu lại trên máy tính này</span>"
